@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Secret_Diary.iml" filepath="$PROJECT_DIR$/.idea/modules/Secret_Diary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Secret Diary/task/Secret_Diary.Secret_Diary-task.iml" filepath="$PROJECT_DIR$/.idea/modules/Secret Diary/task/Secret_Diary.Secret_Diary-task.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Secret Diary/task/Secret_Diary.Secret_Diary-task.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/Secret Diary/task/Secret_Diary.Secret_Diary-task.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Secret Diary/task/Secret_Diary.Secret_Diary-task.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Secret Diary/task/Secret_Diary.Secret_Diary-task.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Secret Diary/task/Secret_Diary.Secret_Diary-task.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/Secret Diary/task/Secret_Diary.Secret_Diary-task.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/Secret_Diary.util.iml" filepath="$PROJECT_DIR$/.idea/modules/util/Secret_Diary.util.iml" />
+    </modules>
+  </component>
+</project>

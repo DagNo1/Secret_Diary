@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/etNewWriting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/dear_diary"
+            android:paddingBottom="@dimen/fifteen" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_marginStart="@dimen/fifteen"
+                android:id="@+id/btnUndo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/fifteen"
+                android:text="@string/undo"/>
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_toEndOf="@+id/btnUndo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/hundredAndNinety"
+                android:layout_marginEnd="@dimen/fifteen"
+                android:text="@string/save"/>
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/tvDiary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,12 @@
+<html><body><h5 id="description">Description</h5>
+<p>You have created a lovely diary so far. Users can add as many notes as they want and remove the last one. The application, however, should also be able to save the data; that is what you must implement in this stage.<span style="color: #64b0f4;"> </span>When the application is closed by users, all the diary text data should be saved, including the date and time notations. Users should see the diary precisely as it was when they restart the application. The <code class="java">Save</code> and <code class="java">Undo</code> buttons should work as before.</p>
+<h5 id="objectives">Objectives</h5>
+<ol>
+<li>Save the diary into <code class="java">SharedPreferences</code> with the name <code class="java">PREF_DIARY</code> and the key <code class="java">KEY_DIARY_TEXT</code> to display it once the application closes. Save the diary after each <code class="java">Save</code> and <code class="java">Undo</code> action</li>
+<li>The content to be saved is the text on <code class="java">textView</code> as a single string with the same structure, that is, last entry saved is first entry displayed with entries separated with a blank line</li>
+<li>When the user restarts the app, load the saved diary automatically</li>
+<li>The two buttons should work like in the previous stage; the same applies to the notes loaded from the storage</li>
+</ol>
+<h5 id="example">Example</h5>
+<p><strong>Example 1</strong>:</p>
+<p><img alt="" height="551" name="Stage4Example.gif" src="https://ucarecdn.com/7d2c04de-284e-4176-8497-31110d5dd511/" width="310"/></p></body></html>

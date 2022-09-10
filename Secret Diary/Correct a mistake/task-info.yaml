@@ -1,0 +1,671 @@
+type: edu
+files:
+- name: build.gradle
+  visible: true
+  text: |-
+    apply plugin: 'com.android.application'
+    apply plugin: 'kotlin-android'
+
+    android {
+      compileSdkVersion hs.android.compileSdkVersion
+
+      defaultConfig {
+
+        applicationId "org.hyperskill.secretdiary"
+        minSdkVersion hs.android.minSdkVersion
+        targetSdkVersion hs.android.targetSdkVersion
+        versionCode 1
+        versionName '1.0'
+      }
+
+      buildFeatures {
+        viewBinding true
+      }
+    }
+
+    dependencies {
+      implementation 'androidx.test:core-ktx:1.4.0'
+      def kotlinVersion = hs.android.kotlinVersion
+      implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
+
+      def coreKtx = hs.android.lib.coreKtx
+      implementation "androidx.core:core-ktx:$coreKtx"
+
+      def appCompat = hs.android.lib.appCompat
+      implementation "androidx.appcompat:appcompat:$appCompat"
+
+      def constraintLayout = hs.android.lib.constraintLayout
+      implementation "androidx.constraintlayout:constraintlayout:$constraintLayout"
+
+      def material = hs.android.lib.material
+      implementation "com.google.android.material:material:$material"
+
+      implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.3.2")
+    }
+  learner_created: false
+- name: src/main/res/layout/activity_main.xml
+  visible: true
+  text: |
+    <?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  learner_created: false
+- name: src/main/res/values/colors.xml
+  visible: true
+  text: |
+    <?xml version="1.0" encoding="utf-8"?>
+    <resources>
+        <color name="colorPrimary">#008577</color>
+        <color name="colorPrimaryDark">#00574B</color>
+        <color name="colorAccent">#D81B60</color>
+    </resources>
+  learner_created: false
+- name: src/main/res/values/styles.xml
+  visible: true
+  text: |
+    <resources>
+
+        <!-- Base application theme. -->
+        <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+            <!-- Customize your theme here. -->
+            <item name="colorPrimary">@color/colorPrimary</item>
+            <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+            <item name="colorAccent">@color/colorAccent</item>
+        </style>
+
+    </resources>
+  learner_created: false
+- name: src/main/res/values/strings.xml
+  visible: true
+  text: |
+    <resources>
+        <string name="app_name">Secret Diary</string>
+    </resources>
+  learner_created: false
+- name: src/main/res/drawable/ic_launcher_background.xml
+  visible: true
+  text: |
+    <?xml version="1.0" encoding="utf-8"?>
+    <vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="108dp"
+        android:height="108dp"
+        android:viewportWidth="108"
+        android:viewportHeight="108">
+        <path
+            android:fillColor="#008577"
+            android:pathData="M0,0h108v108h-108z" />
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M9,0L9,108"
+            android:strokeWidth="0.8"
+            android:strokeColor="#33FFFFFF" />
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M19,0L19,108"
+            android:strokeWidth="0.8"
+            android:strokeColor="#33FFFFFF" />
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M29,0L29,108"
+            android:strokeWidth="0.8"
+            android:strokeColor="#33FFFFFF" />
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M39,0L39,108"
+            android:strokeWidth="0.8"
+            android:strokeColor="#33FFFFFF" />
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M49,0L49,108"
+            android:strokeWidth="0.8"
+            android:strokeColor="#33FFFFFF" />
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M59,0L59,108"
+            android:strokeWidth="0.8"
+            android:strokeColor="#33FFFFFF" />
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M69,0L69,108"
+            android:strokeWidth="0.8"
+            android:strokeColor="#33FFFFFF" />
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M79,0L79,108"
+            android:strokeWidth="0.8"
+            android:strokeColor="#33FFFFFF" />
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M89,0L89,108"
+            android:strokeWidth="0.8"
+            android:strokeColor="#33FFFFFF" />
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M99,0L99,108"
+            android:strokeWidth="0.8"
+            android:strokeColor="#33FFFFFF" />
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M0,9L108,9"
+            android:strokeWidth="0.8"
+            android:strokeColor="#33FFFFFF" />
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M0,19L108,19"
+            android:strokeWidth="0.8"
+            android:strokeColor="#33FFFFFF" />
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M0,29L108,29"
+            android:strokeWidth="0.8"
+            android:strokeColor="#33FFFFFF" />
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M0,39L108,39"
+            android:strokeWidth="0.8"
+            android:strokeColor="#33FFFFFF" />
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M0,49L108,49"
+            android:strokeWidth="0.8"
+            android:strokeColor="#33FFFFFF" />
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M0,59L108,59"
+            android:strokeWidth="0.8"
+            android:strokeColor="#33FFFFFF" />
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M0,69L108,69"
+            android:strokeWidth="0.8"
+            android:strokeColor="#33FFFFFF" />
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M0,79L108,79"
+            android:strokeWidth="0.8"
+            android:strokeColor="#33FFFFFF" />
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M0,89L108,89"
+            android:strokeWidth="0.8"
+            android:strokeColor="#33FFFFFF" />
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M0,99L108,99"
+            android:strokeWidth="0.8"
+            android:strokeColor="#33FFFFFF" />
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M19,29L89,29"
+            android:strokeWidth="0.8"
+            android:strokeColor="#33FFFFFF" />
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M19,39L89,39"
+            android:strokeWidth="0.8"
+            android:strokeColor="#33FFFFFF" />
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M19,49L89,49"
+            android:strokeWidth="0.8"
+            android:strokeColor="#33FFFFFF" />
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M19,59L89,59"
+            android:strokeWidth="0.8"
+            android:strokeColor="#33FFFFFF" />
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M19,69L89,69"
+            android:strokeWidth="0.8"
+            android:strokeColor="#33FFFFFF" />
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M19,79L89,79"
+            android:strokeWidth="0.8"
+            android:strokeColor="#33FFFFFF" />
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M29,19L29,89"
+            android:strokeWidth="0.8"
+            android:strokeColor="#33FFFFFF" />
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M39,19L39,89"
+            android:strokeWidth="0.8"
+            android:strokeColor="#33FFFFFF" />
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M49,19L49,89"
+            android:strokeWidth="0.8"
+            android:strokeColor="#33FFFFFF" />
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M59,19L59,89"
+            android:strokeWidth="0.8"
+            android:strokeColor="#33FFFFFF" />
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M69,19L69,89"
+            android:strokeWidth="0.8"
+            android:strokeColor="#33FFFFFF" />
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M79,19L79,89"
+            android:strokeWidth="0.8"
+            android:strokeColor="#33FFFFFF" />
+    </vector>
+  learner_created: false
+- name: src/main/res/drawable-v24/ic_launcher_foreground.xml
+  visible: true
+  text: |
+    <vector xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:aapt="http://schemas.android.com/aapt"
+        android:width="108dp"
+        android:height="108dp"
+        android:viewportWidth="108"
+        android:viewportHeight="108">
+        <path
+            android:fillType="evenOdd"
+            android:pathData="M32,64C32,64 38.39,52.99 44.13,50.95C51.37,48.37 70.14,49.57 70.14,49.57L108.26,87.69L108,109.01L75.97,107.97L32,64Z"
+            android:strokeWidth="1"
+            android:strokeColor="#00000000">
+            <aapt:attr name="android:fillColor">
+                <gradient
+                    android:endX="78.5885"
+                    android:endY="90.9159"
+                    android:startX="48.7653"
+                    android:startY="61.0927"
+                    android:type="linear">
+                    <item
+                        android:color="#44000000"
+                        android:offset="0.0" />
+                    <item
+                        android:color="#00000000"
+                        android:offset="1.0" />
+                </gradient>
+            </aapt:attr>
+        </path>
+        <path
+            android:fillColor="#FFFFFF"
+            android:fillType="nonZero"
+            android:pathData="M66.94,46.02L66.94,46.02C72.44,50.07 76,56.61 76,64L32,64C32,56.61 35.56,50.11 40.98,46.06L36.18,41.19C35.45,40.45 35.45,39.3 36.18,38.56C36.91,37.81 38.05,37.81 38.78,38.56L44.25,44.05C47.18,42.57 50.48,41.71 54,41.71C57.48,41.71 60.78,42.57 63.68,44.05L69.11,38.56C69.84,37.81 70.98,37.81 71.71,38.56C72.44,39.3 72.44,40.45 71.71,41.19L66.94,46.02ZM62.94,56.92C64.08,56.92 65,56.01 65,54.88C65,53.76 64.08,52.85 62.94,52.85C61.8,52.85 60.88,53.76 60.88,54.88C60.88,56.01 61.8,56.92 62.94,56.92ZM45.06,56.92C46.2,56.92 47.13,56.01 47.13,54.88C47.13,53.76 46.2,52.85 45.06,52.85C43.92,52.85 43,53.76 43,54.88C43,56.01 43.92,56.92 45.06,56.92Z"
+            android:strokeWidth="1"
+            android:strokeColor="#00000000" />
+    </vector>
+  learner_created: false
+- name: src/main/res/mipmap-anydpi-v26/ic_launcher.xml
+  visible: true
+  text: |-
+    <?xml version="1.0" encoding="utf-8"?>
+    <adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+        <background android:drawable="@drawable/ic_launcher_background" />
+        <foreground android:drawable="@drawable/ic_launcher_foreground" />
+    </adaptive-icon>
+  learner_created: false
+- name: src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml
+  visible: true
+  text: |-
+    <?xml version="1.0" encoding="utf-8"?>
+    <adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+        <background android:drawable="@drawable/ic_launcher_background" />
+        <foreground android:drawable="@drawable/ic_launcher_foreground" />
+    </adaptive-icon>
+  learner_created: false
+- name: src/main/java/org/hyperskill/secretdiary/MainActivity.kt
+  visible: true
+  text: |-
+    package org.hyperskill.secretdiary
+
+    import android.os.Bundle
+    import androidx.appcompat.app.AppCompatActivity
+
+
+    class MainActivity : AppCompatActivity() {
+
+        override fun onCreate(savedInstanceState: Bundle?) {
+            super.onCreate(savedInstanceState)
+            setContentView(R.layout.activity_main)
+        }
+
+    }
+  learner_created: false
+- name: src/main/AndroidManifest.xml
+  visible: true
+  text: |-
+    <?xml version="1.0" encoding="utf-8"?>
+    <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        package="org.hyperskill.secretdiary">
+
+      <application
+          android:allowBackup="true"
+          android:icon="@mipmap/ic_launcher"
+          android:label="Secret Diary"
+          android:roundIcon="@mipmap/ic_launcher_round"
+          android:supportsRtl="true"
+          android:theme="@style/AppTheme">
+        <activity android:name="org.hyperskill.secretdiary.MainActivity">
+          <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+          </intent-filter>
+        </activity>
+      </application>
+
+    </manifest>
+  learner_created: false
+- name: src/test/java/org/hyperskill/secretdiary/internals/AbstractUnitTest.kt
+  visible: false
+  text: |-
+    package org.hyperskill.secretdiary.internals
+
+    import android.app.Activity
+    import android.app.AlertDialog
+    import android.content.Intent
+    import android.view.View
+    import org.junit.Assert.assertNotNull
+    import org.junit.Assert.assertTrue
+    import org.robolectric.Robolectric
+    import org.robolectric.Shadows.shadowOf
+    import org.robolectric.android.controller.ActivityController
+    import org.robolectric.shadow.api.Shadow
+    import org.robolectric.shadows.ShadowActivity
+    import org.robolectric.shadows.ShadowAlertDialog
+    import org.robolectric.shadows.ShadowLooper
+    import java.time.Duration
+
+    abstract class AbstractUnitTest<T : Activity>(clazz: Class<T>) {
+
+        /**
+         * Setup and control activities and their lifecycle
+         */
+        protected val activityController: ActivityController<T> by lazy {
+            Robolectric.buildActivity(clazz)
+        }
+
+        /**
+         * The activity being tested.
+         *
+         * It is the @RealObject of the shadowActivity
+         */
+        protected val activity : Activity by lazy {
+            activityController.get()
+        }
+
+        /**
+         * A Roboletric shadow object of the Activity class, contains helper methods to deal with
+         * testing activities like setting permissions, peeking results of launched activities for result,
+         * retrieving shown dialogs, intents and others.
+         *
+         * If you don't know what shadows are you can have a better understanding on that reading this
+         * on roboletric documentation: http://robolectric.org/extending/
+         */
+        protected val shadowActivity: ShadowActivity by lazy {
+            Shadow.extract(activity)
+        }
+
+        /**
+         * A Roboletric shadow object of the mainLooper. Handles enqueued runnables and also the passage of time.
+         *
+         * Usually used with .idleFor(someDurationValue) or .runToEndOfTasks()
+         */
+        protected val shadowLooper: ShadowLooper by lazy {
+            shadowOf(activity.mainLooper)
+        }
+
+        /**
+         * Decorate your test code with this method to ensure better error messages displayed
+         * when tests are run with check button and exceptions are thrown by user implementation.
+         *
+         * returns a value for convenience use, like in tests that involve navigation between Activities
+         */
+        fun <ReturnValue> testActivity(arguments: Intent = Intent(), testCodeBlock: (Activity) -> ReturnValue): ReturnValue {
+            try {
+                activity.intent =  arguments
+                activityController.setup()
+            } catch (ex: Exception) {
+                throw AssertionError("Exception, test failed on activity creation with $ex\n${ex.stackTraceToString()}")
+            }
+
+            return try {
+                testCodeBlock(activity)
+            } catch (ex: Exception) {
+                throw AssertionError("Exception. Test failed on activity execution with $ex\n${ex.stackTraceToString()}")
+            }
+        }
+
+        /**
+         * Use this method to find views.
+         *
+         * The view existence will be assert before being returned
+         */
+        inline fun <reified T> Activity.findViewByString(idString: String): T {
+            val id = this.resources.getIdentifier(idString, "id", this.packageName)
+            val view: View? = this.findViewById(id)
+
+            val idNotFoundMessage = "View with id \"$idString\" was not found"
+            val wrongClassMessage = "View with id \"$idString\" is not from expected class. " +
+                    "Expected ${T::class.java.simpleName} found ${view?.javaClass?.simpleName}"
+
+            assertNotNull(idNotFoundMessage, view)
+            assertTrue(wrongClassMessage, view is T)
+
+            return view as T
+        }
+
+        /**
+         * Use this method to find views.
+         *
+         * The view existence will be assert before being returned
+         */
+        inline fun <reified T> View.findViewByString(idString: String): T {
+            val id = this.resources.getIdentifier(idString, "id", context.packageName)
+            val view: View? = this.findViewById(id)
+
+            val idNotFoundMessage = "View with id \"$idString\" was not found"
+            val wrongClassMessage = "View with id \"$idString\" is not from expected class. " +
+                    "Expected ${T::class.java.simpleName} found ${view?.javaClass?.simpleName}"
+
+            assertNotNull(idNotFoundMessage, view)
+            assertTrue(wrongClassMessage, view is T)
+
+            return view as T
+        }
+
+        /**
+         * Use this method to perform clicks. It will also advance the clock millis milliseconds and run
+         * enqueued Runnable scheduled to run on main looper in that timeframe.
+         * Default value for millis is 500
+         *
+         * Internally it calls performClick() and shadowLooper.idleFor(millis)
+         */
+        protected fun View.clickAndRun(millis: Long = 500){
+            this.performClick()
+            shadowLooper.idleFor(Duration.ofMillis(millis))
+        }
+
+        /**
+         * Use this method to retrieve the latest AlertDialog.
+         *
+         * The existence of such AlertDialog will be asserted before returning.
+         *
+         * Robolectric only supports android.app.AlertDialog, test will not be
+         * able to find androidx.appcompat.app.AlertDialog.
+         */
+        protected fun getLatestAlertDialog(): AlertDialog {
+            val latestAlertDialog = ShadowAlertDialog.getLatestAlertDialog()
+
+            assertNotNull(
+                "There was no AlertDialog found. Make sure to import android.app.AlertDialog version",
+                latestAlertDialog
+            )
+
+            return latestAlertDialog!!
+        }
+    }
+  learner_created: false
+- name: src/test/java/org/hyperskill/secretdiary/internals/CustomClockSystemShadow.kt
+  visible: false
+  text: |-
+    package org.hyperskill.secretdiary.internals
+
+    import android.os.SystemClock
+    import kotlinx.datetime.Clock
+    import kotlinx.datetime.Instant
+    import kotlinx.datetime.toKotlinInstant
+    import org.robolectric.annotation.Implementation
+    import org.robolectric.annotation.Implements
+
+    @Implements(Clock.System::class)
+    class CustomClockSystemShadow {
+
+        @Implementation
+        fun now(): Instant {
+            return SystemClock.currentGnssTimeClock().instant().toKotlinInstant()
+        }
+    }
+  learner_created: false
+- name: src/main/res/values/dimens.xml
+  visible: true
+  text: |-
+    <?xml version="1.0" encoding="utf-8"?>
+    <resources>
+        <dimen name="down_pad">20sp</dimen>
+    </resources>
+  learner_created: true
+- name: src/test/java/org/hyperskill/secretdiary/Stage3UnitTest.kt
+  visible: false
+  text: "package org.hyperskill.secretdiary\n\nimport android.widget.Button\nimport\
+    \ android.widget.EditText\nimport android.widget.TextView\nimport kotlinx.datetime.Clock\n\
+    import org.hyperskill.secretdiary.internals.AbstractUnitTest\nimport org.hyperskill.secretdiary.internals.CustomClockSystemShadow\n\
+    import org.junit.Assert.assertEquals\nimport org.junit.Assert.assertTrue\nimport\
+    \ org.junit.Test\nimport org.junit.runner.RunWith\nimport org.robolectric.RobolectricTestRunner\n\
+    import org.robolectric.annotation.Config\nimport org.robolectric.shadows.ShadowToast\n\
+    import java.text.SimpleDateFormat\nimport java.time.Duration\nimport java.util.Locale\n\
+    \n\n@RunWith(RobolectricTestRunner::class)\n@Config(shadows = [CustomClockSystemShadow::class])\n\
+    class Stage3UnitTest : AbstractUnitTest<MainActivity>(MainActivity::class.java)\
+    \ {\n\n    private val etNewWriting by lazy {\n        val etNewWriting = activity.findViewByString<EditText>(\"\
+    etNewWriting\")\n\n        val messageEtWrongHint =\n            \"etNewWriting\
+    \ should have a hint property with \\\"Dear Diary...\\\" value\"\n        assertEquals(messageEtWrongHint,\
+    \ \"Dear Diary...\", etNewWriting.hint)\n\n        etNewWriting\n    }\n\n   \
+    \ private val btnSave by lazy {\n        val btnSave = activity.findViewByString<Button>(\"\
+    btnSave\")\n\n        val messageBtnSaveWrongText = \"The text of btnSave should\
+    \ be \\\"Save\\\"\"\n        assertEquals(messageBtnSaveWrongText, \"Save\", btnSave.text.toString())\n\
+    \n        btnSave\n    }\n\n    private val tvDiary by lazy {\n        val tvDiary\
+    \ = activity.findViewByString<TextView>(\"tvDiary\")\n\n        val messageTvWrongText\
+    \ = \"Initially the text of tvDiary should be empty\"\n        assertTrue(messageTvWrongText,\
+    \ tvDiary.text.isEmpty())\n\n        tvDiary\n    }\n\n    private val btnUndo\
+    \ by lazy {\n        val btnUndo = activity.findViewByString<Button>(\"btnUndo\"\
+    )\n\n        val messageBtnUndoWrongText = \"The text of btnUndo should be \\\"\
+    Undo\\\"\"\n        assertEquals(messageBtnUndoWrongText, \"Undo\", btnUndo.text.toString())\n\
+    \n        btnUndo\n    }\n\n    @Test\n    fun testShouldCheckEditText() {\n \
+    \       testActivity {\n            etNewWriting\n        }\n    }\n\n    @Test\n\
+    \    fun testShouldCheckButtonSave() {\n        testActivity {\n            btnSave\n\
+    \        }\n    }\n\n    @Test\n    fun testShouldCheckTextView() {\n        testActivity\
+    \ {\n            tvDiary\n        }\n    }\n\n    @Test\n    fun testShouldCheckButtonUndo()\
+    \ {\n        testActivity {\n            btnUndo\n        }\n    }\n\n    @Test\n\
+    \    fun testShouldCheckSavingAndUndo() {\n        testActivity {\n          \
+    \  // ensure all views used on test are initialized with initial state\n     \
+    \       etNewWriting\n            btnUndo\n            btnSave\n            tvDiary\n\
+    \            //\n\n            // First input\n\n            val sampleInputText1\
+    \ = \"This was an awesome day\"\n            etNewWriting.setText(sampleInputText1)\n\
+    \            val instant1 = Clock.System.now()\n            val simpleDateFormat\
+    \ = SimpleDateFormat(\"yyyy-MM-dd HH:mm:ss\", Locale.getDefault())\n         \
+    \   val dateText1 = simpleDateFormat.format(instant1.toEpochMilliseconds())\n\
+    \            btnSave.clickAndRun()\n\n            val expectedOutput1 = \"\"\"\
+    \n            $dateText1\n            $sampleInputText1\n        \"\"\".trimIndent()\n\
+    \            val userOutput1 = tvDiary.text.toString()\n\n            val messageWrongDate1\
+    \ =\n                \"Make sure your date/time has the following format with\
+    \ the correct values: \\\"yyyy-MM-dd HH:mm:ss\\\"\"\n            assertTrue(messageWrongDate1,\
+    \ userOutput1.contains(dateText1))\n\n            val linesExpected1 = expectedOutput1.split(\"\
+    \\n\").size\n            val linesUser1 = userOutput1.split(\"\\n\").size\n  \
+    \          val messageWrongNumberOfLines1 =\n                \"The diary should\
+    \ contain $linesExpected1 lines, but $linesUser1 found\"\n            assertTrue(messageWrongNumberOfLines1,\
+    \ linesExpected1 == linesUser1)\n\n            val messageWrongOutput1 =\n   \
+    \             \"The first line should be the date and time, the second line is\
+    \ the saved text\"\n            assertEquals(messageWrongOutput1, expectedOutput1,\
+    \ userOutput1)\n\n            val messageEtNotCleared = \"EditText should be cleared\
+    \ after each saving\"\n            assertTrue(messageEtNotCleared, etNewWriting.text.isEmpty())\n\
+    \n            shadowLooper.idleFor(Duration.ofSeconds(300_000))\n\n          \
+    \  // Second input\n\n            val sampleInputText2 = \"I had a date with my\
+    \ crush\"\n            etNewWriting.setText(sampleInputText2)\n            val\
+    \ instant2 = Clock.System.now()\n            val dateText2 = simpleDateFormat.format(instant2.toEpochMilliseconds())\n\
+    \            btnSave.clickAndRun()\n\n            val expectedOutput2 = \"\"\"\
+    \n            $dateText2\n            $sampleInputText2\n            \n      \
+    \      $dateText1\n            $sampleInputText1\n        \"\"\".trimIndent()\n\
+    \            val userOutput2 = tvDiary.text.toString()\n\n            val linesExpected2\
+    \ = expectedOutput2.split(\"\\n\").size\n            val linesUser2 = userOutput2.split(\"\
+    \\n\").size\n            val messageWrongNumberOfLines2 =\n                \"\
+    The diary should contain $linesExpected2 lines, but $linesUser2 found\"\n    \
+    \        assertTrue(messageWrongNumberOfLines2, linesExpected2 == linesUser2)\n\
+    \n            val messageWrongOutput2 =\n                \"The newer writing should\
+    \ be on the top, separated by an empty line from the older one\"\n           \
+    \ assertEquals(messageWrongOutput2, expectedOutput2, userOutput2)\n\n        \
+    \    // Until this, this test function is the same as in the previous stage\n\
+    \            // Now let's test the \"Undo\" button\n\n            performUndoAndYesClick()\n\
+    \n            // After pressing the Undo button, the result should be the same\
+    \ as after the first save\n\n            val expectedOutput3 = expectedOutput1\n\
+    \            val userOutput3 = tvDiary.text.toString()\n\n            val linesExpected3\
+    \ = linesExpected1\n            val linesUser3 = userOutput3.split(\"\\n\").size\n\
+    \            val messageWrongNumberOfLines3 =\n                \"The diary should\
+    \ contain $linesExpected3 lines, but $linesUser3 found\"\n            assertTrue(messageWrongNumberOfLines3,\
+    \ linesExpected3 == linesUser3)\n\n            val messageWrongOutput3 =\n   \
+    \             \"The \\\"Undo\\\" button should remove the last note if \\\"Yes\\\
+    \" selected on the AlertDialog\"\n            assertEquals(messageWrongOutput3,\
+    \ expectedOutput3, userOutput3)\n\n\n            btnUndo.clickAndRun()\n     \
+    \       getLatestAlertDialog()\n                .getButton(android.app.AlertDialog.BUTTON_NEGATIVE)\n\
+    \                .clickAndRun()\n\n            val expectedOutput4 = expectedOutput3\n\
+    \            val userOutput4 = tvDiary.text.toString()\n            val linesExpected4\
+    \ = linesExpected3\n            val linesUser4 = userOutput4.split(\"\\n\").size\n\
+    \            val messageWrongNumberOfLines4 =\n                \"The diary should\
+    \ contain $linesExpected4 lines, but $linesUser4 found\"\n            assertTrue(messageWrongNumberOfLines4,\
+    \ linesExpected4 == linesUser4)\n\n            val messageWrongOutput4 =\n   \
+    \             \"The \\\"Undo\\\" button should not do anything if \\\"No\\\" selected\
+    \ on the AlertDialog\"\n            assertEquals(messageWrongOutput4, expectedOutput4,\
+    \ userOutput4)\n        }\n    }\n\n    @Test\n    fun testShouldCheckSavingBlank()\
+    \ {\n        testActivity {\n            // ensure all views used on test are\
+    \ initialized with initial state\n            etNewWriting\n            btnSave\n\
+    \            tvDiary\n            btnUndo\n            //\n\n            val sampleInputText1\
+    \ = \"First input\"\n            etNewWriting.setText(sampleInputText1)\n    \
+    \        btnSave.performClick()\n\n            val sampleInputText2 = \"Second\
+    \ input\"\n            etNewWriting.setText(sampleInputText2)\n            btnSave.performClick()\n\
+    \n            val diaryTextBeforeSaveBlank = tvDiary.text\n\n            val inputBlankString\
+    \ = \"\"\"\n                  \n                          \n            \"\"\"\
+    .trimIndent()\n            etNewWriting.setText(inputBlankString)\n          \
+    \  btnSave.clickAndRun()\n\n            val userToastText = ShadowToast.getTextOfLatestToast()\n\
+    \            val savingBlankToastText = \"Empty or blank input cannot be saved\"\
+    \n            val messageWrongToastText = \"When trying to save an empty or blank\
+    \ string, the appropriate Toast message should be shown\"\n            assertEquals(messageWrongToastText,\
+    \ savingBlankToastText, userToastText)\n\n            val diaryTextAfterSaveBlank\
+    \ = tvDiary.text\n            val messageWrongInputFormat = \"Do not save blank\
+    \ text!\"\n            assertEquals(messageWrongInputFormat, diaryTextBeforeSaveBlank,\
+    \ diaryTextAfterSaveBlank)\n        }\n    }\n\n    @Test\n    fun testShouldCheckUndoBlank()\
+    \ {\n        testActivity {\n            // ensure all views used on test are\
+    \ initialized with initial state\n            etNewWriting\n            btnSave\n\
+    \            tvDiary\n            btnUndo\n            //\n\n            tvDiary.text\
+    \ = \"\"\n\n            btnUndo.performClick()\n            btnUndo.performClick()\n\
+    \        }\n    }\n\n    private fun performUndoAndYesClick() {\n        btnUndo.clickAndRun()\n\
+    \n        getLatestAlertDialog()\n            .getButton(android.app.AlertDialog.BUTTON_POSITIVE)\n\
+    \            .clickAndRun()\n    }\n}"
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/21701#comment
+status: Failed
+feedback:
+  message: There was no AlertDialog found. Make sure to import android.app.AlertDialog
+    version
+  time: Sat, 10 Sep 2022 15:22:50 UTC
+record: 3

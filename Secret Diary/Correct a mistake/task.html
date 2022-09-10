@@ -1,0 +1,21 @@
+<html><body><h5 id="description">Description</h5>
+<p>Everyone makes mistakes. Users can mistype a word in the input text and save it. After that, they can realize they made a typo in the diary and fix it. In this stage, you need to implement the <code class="java">Undo</code> button.</p>
+<p>It is not enough. What if users accidentally click the undo button after composing a long entry? To avoid such misclicks, an <code class="java">AlertDialog</code> should appear that ask the user if they are sure about deleting the last note.</p>
+<h5 id="objectives">Objectives</h5>
+<ol>
+<li> Create a new <code class="java">Button</code> with the <code class="java">id</code> attribute of <code class="java">btnUndo</code> and <code class="java">text</code> set to <code class="java">Undo</code></li>
+<li> When users click on the <code class="java">Undo</code> button, display an <code class="java">AlertDialog</code> with the following properties:
+    <ul>
+<li><code class="java">Title</code>: <code class="java">Remove last note</code></li>
+<li><code class="java">Message</code>: <code class="java">Do you really want to remove the last writing? This operation cannot be undone!</code></li>
+<li><code class="java">Positive Button</code>: <code class="java">Yes</code></li>
+<li><code class="java">Negative Button</code>: <code class="java">No</code></li>
+<li>When importing <code class="java">AlertDialog</code> make sure to import <code class="java">android.app.AlertDialog</code></li>
+</ul>
+</li>
+<li> If a user selects <code class="java">Yes</code>, remove the last note from the diary. Otherwise, do nothing</li>
+<li> If a user selects <code class="java">Yes</code> on the <code class="java">AlertDialog</code> but the diary is empty, do nothing</li>
+</ol>
+<h5 id="example">Example</h5>
+<p><strong>Example 1</strong>:</p>
+<p><img alt="" height="509" name="Stage3Example.gif" src="https://ucarecdn.com/6f70585b-df68-4135-bbe2-3ddb167cc715/" width="286"/></p></body></html>

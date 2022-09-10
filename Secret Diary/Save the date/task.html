@@ -1,0 +1,21 @@
+<html><body><h5 id="description">Description</h5>
+<p>In the second stage, add two more functionalities to your application. First, the diary should save all the notes, not only the last one. Also, a user may want to see when each note is created, so you need to attach the date and time when a message was added.</p>
+<h5 id="objectives">Objectives</h5>
+<ul>
+<li>Change the functionality of the <code class="java">Save</code> button. When a user clicks on it, append a new note to the top of the diary with the timestamp, which is the date and time of creation</li>
+<li>The timestamp come first with the following format: <code class="java">yyyy-MM-dd HH:mm:ss</code>. The saved text should appear in the following line</li>
+<li>To produce the timestamp use <code class="java">SimpleDateFormat</code> with <code class="java">Locale.getDefault()</code> so that the timestamp produced is aware of user's timezone while being produced</li>
+<li>Separate each note with an empty line</li>
+</ul>
+<p>
+  Obs: The passage of time will be emulated on tests.
+  There are several time related apis in java/kotlin/android environment,
+  but tests time emulation won't guarantee to be compatible with all of them for this project.
+</p>
+<p>
+  You can use <code class="java">Clock.System.now()</code>
+  which will be guaranteed to be compatible with tests time emulation.
+</p>
+<h5 id="example">Example</h5>
+<p><strong>Example 1</strong>:</p>
+<p><img alt="" height="577" name="Stage2Example.gif" src="https://ucarecdn.com/da023d16-8b2c-495c-8643-c24f8e5cbe4c/" width="324"/></p></body></html>

@@ -1,0 +1,32 @@
+<html><body><h5 id="description">Description</h5>
+<p>In the first stage, you'll implement the basic diary functionality. Users should be able to enter a note they want and save it with a button. After this operation, the saved text should appear in the diary.</p>
+<h5 id="objectives">Objectives</h5>
+<ol>
+<li>
+    Create the following components of the user interface with the appropriate features:
+    <ul>
+<li>An <code class="java">Activity</code> named <code class="java">MainActivity</code></li>
+<li>A <code class="java">EditText</code> field with the <code class="java">id</code> attribute set to <code class="java">etNewWriting</code> and the <code class="java">hint</code> attribute set to <code class="java">Dear Diary...</code></li>
+<li>A <code class="java">Button</code> with the <code class="java">id</code> of <code class="java">btnSave</code> and the <code class="java">text</code> <code class="java">Save</code></li>
+<li>A <code class="java">TextView</code> with the <code class="java">id</code> of <code class="java">tvDiary</code> that shows the saved text after a click on the save button</li>
+</ul>
+</li>
+<li>
+    Add the following functionalities to the application:
+    <ul>
+<li>When the <code class="java">Save</code> button is clicked, the diary should display exactly the same text as the user entered</li>
+<li>If the diary already contains something, overwrite it</li>
+<li>After every saving, clear the input field</li>
+</ul>
+</li>
+<li>
+    Handle the exceptional cases:
+    <ul>
+<li>When the <code class="java">Save</code> button is clicked, and the input is either empty or contains only whitespace characters, the input should not be saved, and a <code class="java">Toast</code> message should warn users with the following text: <code class="java">Empty or blank input cannot be saved</code></li>
+</ul>
+</li>
+</ol>
+<h5 id="example">Example</h5>
+<p><strong>Example 1</strong>:</p>
+<p><img alt="" height="513" name="Stage1Example.gif" src="https://ucarecdn.com/66bec3ce-69cc-4b5b-bf86-ca0113e5ede1/" style="float: left;" width="288"/></p>
+</body></html>

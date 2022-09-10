@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="C:\Users\Dagim\AndroidStudioProjects\Secret Diary\Secret Diary\task"
+    name=":Secret_Diary-task"
+    type="APP"
+    maven="Secret Diary:Secret_Diary-task:"
+    gradle="7.0.2"
+    buildFolder="build"
+    bootClassPath="C:\Users\Dagim\AppData\Local\Android\Sdk\platforms\android-29\android.jar;C:\Users\Dagim\AppData\Local\Android\Sdk\build-tools\30.0.2\core-lambda-stubs.jar"
+    javaSourceLevel="1.8"
+    compileTarget="android-29"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>
