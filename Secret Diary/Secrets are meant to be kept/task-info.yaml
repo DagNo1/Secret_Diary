@@ -722,6 +722,15 @@ files:
     \     .getButton(android.app.AlertDialog.BUTTON_NEGATIVE)\n            .clickAndRun()\n\
     \    }\n}"
   learner_created: false
+- name: src/main/res/values/dimens.xml
+  visible: true
+  text: |-
+    <?xml version="1.0" encoding="utf-8"?>
+    <resources>
+        <dimen name="fifteen">15sp</dimen>
+        <dimen name="hundredAndNinety">190dp</dimen>
+    </resources>
+  learner_created: true
 - name: src/test/java/org/hyperskill/secretdiary/Stage5UnitTest.kt
   visible: false
   text: |-
@@ -907,4 +916,4 @@ files:
   learner_created: false
 feedback_link: https://hyperskill.org/learn/step/21703#comment
 status: Unchecked
-record: -1
+record: 5

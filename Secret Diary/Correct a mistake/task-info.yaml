@@ -663,9 +663,8 @@ files:
     \            .clickAndRun()\n    }\n}"
   learner_created: false
 feedback_link: https://hyperskill.org/learn/step/21701#comment
-status: Failed
+status: Solved
 feedback:
-  message: There was no AlertDialog found. Make sure to import android.app.AlertDialog
-    version
-  time: Sat, 10 Sep 2022 15:22:50 UTC
+  message: Congratulations!
+  time: Sat, 10 Sep 2022 16:26:37 UTC
 record: 3

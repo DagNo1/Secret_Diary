@@ -539,6 +539,15 @@ files:
         }
     }
   learner_created: false
+- name: src/main/res/values/dimens.xml
+  visible: true
+  text: |-
+    <?xml version="1.0" encoding="utf-8"?>
+    <resources>
+        <dimen name="fifteen">15sp</dimen>
+        <dimen name="hundredAndNinety">190dp</dimen>
+    </resources>
+  learner_created: true
 - name: src/test/java/org/hyperskill/secretdiary/Stage4UnitTest.kt
   visible: false
   text: "package org.hyperskill.secretdiary\n\nimport android.content.Context.MODE_PRIVATE\n\
@@ -723,5 +732,8 @@ files:
     \    }\n}"
   learner_created: false
 feedback_link: https://hyperskill.org/learn/step/21702#comment
-status: Unchecked
-record: -1
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Wed, 14 Sep 2022 14:44:52 UTC
+record: 4
