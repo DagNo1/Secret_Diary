@@ -13,31 +13,26 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
-    private val entries = mutableListOf<String>()
-
+    private lateinit var oldEntry: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        oldEntry = findViewById(R.id.tvDiary)
         load()
         findViewById<Button>(R.id.btnSave).setOnClickListener { save() }
         findViewById<Button>(R.id.btnUndo).setOnClickListener { undo() }
     }
     private fun load() {
         val sharedPreferences = getSharedPreferences("PREF_DIARY",Context.MODE_PRIVATE)
-        val oldEntries: String = sharedPreferences.getString("KEY_DIARY_TEXT", null) ?: return
-        entries.addAll(oldEntries.split("|").toMutableList())
-        val oldEntry: TextView = findViewById(R.id.tvDiary)
-        oldEntry.text = entries.joinToString("\n\n")
+        oldEntry.text = sharedPreferences.getString("KEY_DIARY_TEXT", null) ?: return
     }
     private fun update() {
-        val oldEntry: TextView = findViewById(R.id.tvDiary)
         val sharedPreferences = getSharedPreferences("PREF_DIARY",Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
         editor.apply {
-            putString("KEY_DIARY_TEXT", entries.joinToString("|"))
+            putString("KEY_DIARY_TEXT", oldEntry.text.toString())
             apply()
         }
-        oldEntry.text = entries.joinToString("\n\n")
     }
     private fun save() {
         val newEntry = findViewById<EditText>(R.id.etNewWriting)
@@ -45,7 +40,8 @@ class MainActivity : AppCompatActivity() {
             val errMsg = "Empty or blank input cannot be saved"
             Toast.makeText(this, errMsg, Toast.LENGTH_SHORT).show()
         } else {
-            entries.add(0, getTime() + "\n" + newEntry.text.toString())
+            oldEntry.text = getTime() + "\n" + newEntry.text.toString() +
+                    if (oldEntry.text.isNotBlank()) "\n\n"+ oldEntry.text else ""
             newEntry.text.clear()
             update()
         }
@@ -55,10 +51,10 @@ class MainActivity : AppCompatActivity() {
             .setTitle("Remove last note")
             .setMessage(" Do you really want to remove the last writing? This operation cannot be undone!")
             .setPositiveButton("Yes") { _, _ ->
-                if (entries.isNotEmpty()) {
-                    entries.removeAt(0)
-                    update()
-                }
+                val k = oldEntry.text.toString().indexOf("\n\n")
+                if (k != -1) oldEntry.text = oldEntry.text.toString().substring(k+2)
+                else oldEntry.text = ""
+                update()
             }
             .setNegativeButton("No", null)
             .show()
@@ -68,6 +64,3 @@ class MainActivity : AppCompatActivity() {
         return SimpleDateFormat("yyyy-MM-dd HH:mm:ss",Locale.getDefault()).format(zFormat).toString()
     }
 }
-
-
-

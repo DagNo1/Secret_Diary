@@ -29,67 +29,68 @@
 19-->C:\Users\Dagim\AndroidStudioProjects\Secret Diary\Secret Diary\task\src\main\AndroidManifest.xml:9:7-52
 20        android:supportsRtl="true"
 20-->C:\Users\Dagim\AndroidStudioProjects\Secret Diary\Secret Diary\task\src\main\AndroidManifest.xml:10:7-33
-21        android:theme="@style/AppTheme" >
-21-->C:\Users\Dagim\AndroidStudioProjects\Secret Diary\Secret Diary\task\src\main\AndroidManifest.xml:11:7-38
-22        <activity android:name="org.hyperskill.secretdiary.MainActivity" >
-22-->C:\Users\Dagim\AndroidStudioProjects\Secret Diary\Secret Diary\task\src\main\AndroidManifest.xml:12:5-18:16
-22-->C:\Users\Dagim\AndroidStudioProjects\Secret Diary\Secret Diary\task\src\main\AndroidManifest.xml:12:15-69
-23            <intent-filter>
-23-->C:\Users\Dagim\AndroidStudioProjects\Secret Diary\Secret Diary\task\src\main\AndroidManifest.xml:13:7-17:23
-24                <action android:name="android.intent.action.MAIN" />
-24-->C:\Users\Dagim\AndroidStudioProjects\Secret Diary\Secret Diary\task\src\main\AndroidManifest.xml:14:9-61
-24-->C:\Users\Dagim\AndroidStudioProjects\Secret Diary\Secret Diary\task\src\main\AndroidManifest.xml:14:17-58
-25
-26                <category android:name="android.intent.category.LAUNCHER" />
-26-->C:\Users\Dagim\AndroidStudioProjects\Secret Diary\Secret Diary\task\src\main\AndroidManifest.xml:16:9-69
-26-->C:\Users\Dagim\AndroidStudioProjects\Secret Diary\Secret Diary\task\src\main\AndroidManifest.xml:16:19-66
-27            </intent-filter>
-28        </activity>
-29        <activity
-29-->[androidx.test:core:1.4.0] C:\Users\Dagim\.gradle\caches\transforms-3\4f22b61a6e136098409824c23946b5dc\transformed\jetified-core-1.4.0\AndroidManifest.xml:27:9-34:20
-30            android:name="androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity"
-30-->[androidx.test:core:1.4.0] C:\Users\Dagim\.gradle\caches\transforms-3\4f22b61a6e136098409824c23946b5dc\transformed\jetified-core-1.4.0\AndroidManifest.xml:28:13-99
-31            android:exported="true"
-31-->[androidx.test:core:1.4.0] C:\Users\Dagim\.gradle\caches\transforms-3\4f22b61a6e136098409824c23946b5dc\transformed\jetified-core-1.4.0\AndroidManifest.xml:29:13-36
-32            android:theme="@android:style/Theme" >
-32-->[androidx.test:core:1.4.0] C:\Users\Dagim\.gradle\caches\transforms-3\4f22b61a6e136098409824c23946b5dc\transformed\jetified-core-1.4.0\AndroidManifest.xml:30:13-49
-33            <intent-filter>
-33-->[androidx.test:core:1.4.0] C:\Users\Dagim\.gradle\caches\transforms-3\4f22b61a6e136098409824c23946b5dc\transformed\jetified-core-1.4.0\AndroidManifest.xml:31:13-33:29
-34                <action android:name="android.intent.action.MAIN" />
-34-->C:\Users\Dagim\AndroidStudioProjects\Secret Diary\Secret Diary\task\src\main\AndroidManifest.xml:14:9-61
-34-->C:\Users\Dagim\AndroidStudioProjects\Secret Diary\Secret Diary\task\src\main\AndroidManifest.xml:14:17-58
-35            </intent-filter>
-36        </activity>
-37        <activity
-37-->[androidx.test:core:1.4.0] C:\Users\Dagim\.gradle\caches\transforms-3\4f22b61a6e136098409824c23946b5dc\transformed\jetified-core-1.4.0\AndroidManifest.xml:35:9-42:20
-38            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity"
-38-->[androidx.test:core:1.4.0] C:\Users\Dagim\.gradle\caches\transforms-3\4f22b61a6e136098409824c23946b5dc\transformed\jetified-core-1.4.0\AndroidManifest.xml:36:13-95
-39            android:exported="true"
-39-->[androidx.test:core:1.4.0] C:\Users\Dagim\.gradle\caches\transforms-3\4f22b61a6e136098409824c23946b5dc\transformed\jetified-core-1.4.0\AndroidManifest.xml:37:13-36
-40            android:theme="@android:style/Theme" >
-40-->[androidx.test:core:1.4.0] C:\Users\Dagim\.gradle\caches\transforms-3\4f22b61a6e136098409824c23946b5dc\transformed\jetified-core-1.4.0\AndroidManifest.xml:38:13-49
-41            <intent-filter>
-41-->[androidx.test:core:1.4.0] C:\Users\Dagim\.gradle\caches\transforms-3\4f22b61a6e136098409824c23946b5dc\transformed\jetified-core-1.4.0\AndroidManifest.xml:31:13-33:29
-42                <action android:name="android.intent.action.MAIN" />
-42-->C:\Users\Dagim\AndroidStudioProjects\Secret Diary\Secret Diary\task\src\main\AndroidManifest.xml:14:9-61
-42-->C:\Users\Dagim\AndroidStudioProjects\Secret Diary\Secret Diary\task\src\main\AndroidManifest.xml:14:17-58
-43            </intent-filter>
-44        </activity>
-45        <activity
-45-->[androidx.test:core:1.4.0] C:\Users\Dagim\.gradle\caches\transforms-3\4f22b61a6e136098409824c23946b5dc\transformed\jetified-core-1.4.0\AndroidManifest.xml:43:9-50:20
-46            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity"
-46-->[androidx.test:core:1.4.0] C:\Users\Dagim\.gradle\caches\transforms-3\4f22b61a6e136098409824c23946b5dc\transformed\jetified-core-1.4.0\AndroidManifest.xml:44:13-103
-47            android:exported="true"
-47-->[androidx.test:core:1.4.0] C:\Users\Dagim\.gradle\caches\transforms-3\4f22b61a6e136098409824c23946b5dc\transformed\jetified-core-1.4.0\AndroidManifest.xml:45:13-36
-48            android:theme="@android:style/Theme.Dialog" >
-48-->[androidx.test:core:1.4.0] C:\Users\Dagim\.gradle\caches\transforms-3\4f22b61a6e136098409824c23946b5dc\transformed\jetified-core-1.4.0\AndroidManifest.xml:46:13-56
-49            <intent-filter>
-49-->[androidx.test:core:1.4.0] C:\Users\Dagim\.gradle\caches\transforms-3\4f22b61a6e136098409824c23946b5dc\transformed\jetified-core-1.4.0\AndroidManifest.xml:31:13-33:29
-50                <action android:name="android.intent.action.MAIN" />
-50-->C:\Users\Dagim\AndroidStudioProjects\Secret Diary\Secret Diary\task\src\main\AndroidManifest.xml:14:9-61
-50-->C:\Users\Dagim\AndroidStudioProjects\Secret Diary\Secret Diary\task\src\main\AndroidManifest.xml:14:17-58
-51            </intent-filter>
-52        </activity>
-53    </application>
-54
-55</manifest>
+21        android:testOnly="true"
+22        android:theme="@style/AppTheme" >
+22-->C:\Users\Dagim\AndroidStudioProjects\Secret Diary\Secret Diary\task\src\main\AndroidManifest.xml:11:7-38
+23        <activity android:name="org.hyperskill.secretdiary.MainActivity" >
+23-->C:\Users\Dagim\AndroidStudioProjects\Secret Diary\Secret Diary\task\src\main\AndroidManifest.xml:12:5-18:16
+23-->C:\Users\Dagim\AndroidStudioProjects\Secret Diary\Secret Diary\task\src\main\AndroidManifest.xml:12:15-69
+24            <intent-filter>
+24-->C:\Users\Dagim\AndroidStudioProjects\Secret Diary\Secret Diary\task\src\main\AndroidManifest.xml:13:7-17:23
+25                <action android:name="android.intent.action.MAIN" />
+25-->C:\Users\Dagim\AndroidStudioProjects\Secret Diary\Secret Diary\task\src\main\AndroidManifest.xml:14:9-61
+25-->C:\Users\Dagim\AndroidStudioProjects\Secret Diary\Secret Diary\task\src\main\AndroidManifest.xml:14:17-58
+26
+27                <category android:name="android.intent.category.LAUNCHER" />
+27-->C:\Users\Dagim\AndroidStudioProjects\Secret Diary\Secret Diary\task\src\main\AndroidManifest.xml:16:9-69
+27-->C:\Users\Dagim\AndroidStudioProjects\Secret Diary\Secret Diary\task\src\main\AndroidManifest.xml:16:19-66
+28            </intent-filter>
+29        </activity>
+30        <activity
+30-->[androidx.test:core:1.4.0] C:\Users\Dagim\.gradle\caches\transforms-3\4f22b61a6e136098409824c23946b5dc\transformed\jetified-core-1.4.0\AndroidManifest.xml:27:9-34:20
+31            android:name="androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity"
+31-->[androidx.test:core:1.4.0] C:\Users\Dagim\.gradle\caches\transforms-3\4f22b61a6e136098409824c23946b5dc\transformed\jetified-core-1.4.0\AndroidManifest.xml:28:13-99
+32            android:exported="true"
+32-->[androidx.test:core:1.4.0] C:\Users\Dagim\.gradle\caches\transforms-3\4f22b61a6e136098409824c23946b5dc\transformed\jetified-core-1.4.0\AndroidManifest.xml:29:13-36
+33            android:theme="@android:style/Theme" >
+33-->[androidx.test:core:1.4.0] C:\Users\Dagim\.gradle\caches\transforms-3\4f22b61a6e136098409824c23946b5dc\transformed\jetified-core-1.4.0\AndroidManifest.xml:30:13-49
+34            <intent-filter>
+34-->[androidx.test:core:1.4.0] C:\Users\Dagim\.gradle\caches\transforms-3\4f22b61a6e136098409824c23946b5dc\transformed\jetified-core-1.4.0\AndroidManifest.xml:31:13-33:29
+35                <action android:name="android.intent.action.MAIN" />
+35-->C:\Users\Dagim\AndroidStudioProjects\Secret Diary\Secret Diary\task\src\main\AndroidManifest.xml:14:9-61
+35-->C:\Users\Dagim\AndroidStudioProjects\Secret Diary\Secret Diary\task\src\main\AndroidManifest.xml:14:17-58
+36            </intent-filter>
+37        </activity>
+38        <activity
+38-->[androidx.test:core:1.4.0] C:\Users\Dagim\.gradle\caches\transforms-3\4f22b61a6e136098409824c23946b5dc\transformed\jetified-core-1.4.0\AndroidManifest.xml:35:9-42:20
+39            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity"
+39-->[androidx.test:core:1.4.0] C:\Users\Dagim\.gradle\caches\transforms-3\4f22b61a6e136098409824c23946b5dc\transformed\jetified-core-1.4.0\AndroidManifest.xml:36:13-95
+40            android:exported="true"
+40-->[androidx.test:core:1.4.0] C:\Users\Dagim\.gradle\caches\transforms-3\4f22b61a6e136098409824c23946b5dc\transformed\jetified-core-1.4.0\AndroidManifest.xml:37:13-36
+41            android:theme="@android:style/Theme" >
+41-->[androidx.test:core:1.4.0] C:\Users\Dagim\.gradle\caches\transforms-3\4f22b61a6e136098409824c23946b5dc\transformed\jetified-core-1.4.0\AndroidManifest.xml:38:13-49
+42            <intent-filter>
+42-->[androidx.test:core:1.4.0] C:\Users\Dagim\.gradle\caches\transforms-3\4f22b61a6e136098409824c23946b5dc\transformed\jetified-core-1.4.0\AndroidManifest.xml:31:13-33:29
+43                <action android:name="android.intent.action.MAIN" />
+43-->C:\Users\Dagim\AndroidStudioProjects\Secret Diary\Secret Diary\task\src\main\AndroidManifest.xml:14:9-61
+43-->C:\Users\Dagim\AndroidStudioProjects\Secret Diary\Secret Diary\task\src\main\AndroidManifest.xml:14:17-58
+44            </intent-filter>
+45        </activity>
+46        <activity
+46-->[androidx.test:core:1.4.0] C:\Users\Dagim\.gradle\caches\transforms-3\4f22b61a6e136098409824c23946b5dc\transformed\jetified-core-1.4.0\AndroidManifest.xml:43:9-50:20
+47            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity"
+47-->[androidx.test:core:1.4.0] C:\Users\Dagim\.gradle\caches\transforms-3\4f22b61a6e136098409824c23946b5dc\transformed\jetified-core-1.4.0\AndroidManifest.xml:44:13-103
+48            android:exported="true"
+48-->[androidx.test:core:1.4.0] C:\Users\Dagim\.gradle\caches\transforms-3\4f22b61a6e136098409824c23946b5dc\transformed\jetified-core-1.4.0\AndroidManifest.xml:45:13-36
+49            android:theme="@android:style/Theme.Dialog" >
+49-->[androidx.test:core:1.4.0] C:\Users\Dagim\.gradle\caches\transforms-3\4f22b61a6e136098409824c23946b5dc\transformed\jetified-core-1.4.0\AndroidManifest.xml:46:13-56
+50            <intent-filter>
+50-->[androidx.test:core:1.4.0] C:\Users\Dagim\.gradle\caches\transforms-3\4f22b61a6e136098409824c23946b5dc\transformed\jetified-core-1.4.0\AndroidManifest.xml:31:13-33:29
+51                <action android:name="android.intent.action.MAIN" />
+51-->C:\Users\Dagim\AndroidStudioProjects\Secret Diary\Secret Diary\task\src\main\AndroidManifest.xml:14:9-61
+51-->C:\Users\Dagim\AndroidStudioProjects\Secret Diary\Secret Diary\task\src\main\AndroidManifest.xml:14:17-58
+52            </intent-filter>
+53        </activity>
+54    </application>
+55
+56</manifest>
