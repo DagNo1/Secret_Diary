@@ -17,7 +17,7 @@ buildscript {
   dependencies {
     classpath 'com.github.hyperskill:hs-gradle-plugin:release-SNAPSHOT'
     classpath "com.android.tools.build:gradle:$androidGradleVersion"
-    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinGradleVersion"
+    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.10"
   }
 
   configurations.all {

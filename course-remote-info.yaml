@@ -4,7 +4,7 @@ hyperskill_project:
   is_template_based: false
   use_ide: true
   environment: android
-update_date: Wed, 14 Sep 2022 14:15:36 UTC
+update_date: Thu, 15 Sep 2022 14:10:56 UTC
 stages:
 - id: 1398
   step: 21699
@@ -20,7 +20,7 @@ stages:
   is_completed: true
 - id: 1402
   step: 21703
-  is_completed: false
+  is_completed: true
 topics:
   0:
   - title: Binary numbers
@@ -143,10 +143,10 @@ topics:
     theory_id: 10740
   - title: Member functions
     theory_id: 6364
-  - title: For loop and ranges
-    theory_id: 4652
   - title: Introduction to MutableList
     theory_id: 14879
+  - title: For loop and ranges
+    theory_id: 4652
   - title: Work with MutableLists
     theory_id: 14902
   - title: For loop and lists

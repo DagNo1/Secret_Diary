@@ -3,4 +3,7 @@
     <string name="dear_diary">Dear Diary...</string>
     <string name="save">Save</string>
     <string name="undo">Undo</string>
+    <string name="secret_diary">Secret Diary</string>
+    <string name="enter_pin">Enter PIN</string>
+    <string name="log_in">Log In</string>
 </resources>
